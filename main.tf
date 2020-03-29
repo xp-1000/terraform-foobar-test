@@ -15,15 +15,15 @@ module "cloud-aws" {
 }
 
 module "kubernetes-node" {
-  source = "./modules/kubernetes/node"
+  source = "./modules/caas/kubernetes/node"
 }
 
 module "kubernetes-cluster" {
-  source = "./modules/kubernetes/cluster"
+  source = "./modules/caas/kubernetes/cluster"
 }
 
 module "kubernetes-common" {
-  source = "./modules/kubernetes/common"
+  source = "./modules/caas/kubernetes/common"
 }
 
 module "cloud-common" {
