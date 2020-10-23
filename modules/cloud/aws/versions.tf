@@ -1,9 +1,13 @@
-
 terraform {
-  required_version = "~> 0.12"
+  # Modules is now only being tested with Terraform 0.13.x. However, to make upgrading easier, we are setting
+  # 0.12.26 as the minimum version, as that version added support for required_providers with source URLs, 
+  # making it forwards compatible with 0.13.x code.
+  required_version = ">= 0.12.26"
+
   required_providers {
-    aws      = "~> 2"
-    signalfx = "~> 4"
+    signalfx = {
+      source  = "splunk-terraform/signalfx"
+      version = ">= 4.26.4"
+    }
   }
 }
-
