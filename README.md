@@ -2,3 +2,4 @@
 test for terraform registry structure
 oo
 oo
+oo
